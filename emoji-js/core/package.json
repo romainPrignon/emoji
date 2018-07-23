@@ -1,0 +1,15 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "got": "^8.3.1",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "ava": "^1.0.0-beta.6"
+  }
+}
