@@ -1,0 +1,8 @@
+[package]
+
+name = "core"
+version = "0.0.1"
+authors = [ "Romain Prignon pro.rprignon@gmail.com" ]
+
+[lib]
+path = "./lib.rs"

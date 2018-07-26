@@ -2,7 +2,7 @@ installation
 ============
 
 go
---
+---
 hard with gopath and stuff
 
 python
@@ -10,9 +10,11 @@ python
 easy : apt
 
 rust:
+-----
 semble easy mais prend de la place
 
 ocaml:
+------
 simple, fr, bien expliquer
 
 
@@ -43,7 +45,7 @@ node
 
 
 go
---
+---
 go build main.go => assez simple
 
 cli code
@@ -55,5 +57,5 @@ difficil gestion d'erreur avec try:catch
 difficil de parcé les couleur de la console
 
 go
---
+---
 assez simple a mettre en place, ya des function toutes faites
