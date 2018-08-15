@@ -1,0 +1,10 @@
+name: core
+version: 0.1.0.0
+description: core package
+build-type: Simple
+cabal-version: >=1.2
+
+executable emoji-haskell-core
+  main-is: Main.hs
+  build-depends: base, network
+  

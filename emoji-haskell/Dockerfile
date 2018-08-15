@@ -4,7 +4,7 @@ WORKDIR /opt
 
 COPY . .
 
-RUN cabal update
-RUN cabal install
+RUN cd core && cabal update
+RUN cd core && cabal install
 
 CMD ["cabal", "run"]

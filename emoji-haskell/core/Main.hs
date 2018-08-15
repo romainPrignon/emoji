@@ -17,7 +17,8 @@ emoji word =
     
 -- emoji "foo" = throw
 
--- main :: IO ()
--- main = -- the following are the same
-    -- putStrLn $ emoji "smthg"
-    -- putStrLn (emoji "smthg")
+-- the following are the same
+main :: IO ()
+main =
+    putStrLn $ emoji "smthg"
+    putStrLn (emoji "smthg")
