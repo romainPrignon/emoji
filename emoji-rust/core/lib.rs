@@ -19,7 +19,7 @@
 
 // fn filter_best_emoji() {}
 
-fn emoji(word: String) -> &'static str {
+fn emoji(word: &str) -> &str {
     // let res = do_query(word)
     // return filter_best_emoji(res)
     
@@ -31,6 +31,6 @@ fn emoji(word: String) -> &'static str {
 }
 
 fn main() {
-    let emo = emoji(String::from("love"));
+    let emo = emoji("love");
     println!("{}", emo);
 }

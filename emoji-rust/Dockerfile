@@ -4,7 +4,10 @@ WORKDIR /opt
 
 COPY . .
 
-RUN cd core && cargo install
+RUN cd core && cargo build
 
-# because cd core
-CMD ["cargo", "run"]
+# here because of cd core
+RUN cd core && cargo run
+
+# comment because cd core
+#CMD ["cargo", "run"]
