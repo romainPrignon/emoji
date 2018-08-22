@@ -12,4 +12,5 @@ name = "emoji"
 path = "./lib.rs"
 
 [dependencies]
-#hyper = "0.12"
+hyper = "0.12"
+http = "0.1"

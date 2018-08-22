@@ -17,6 +17,13 @@ ocaml:
 ------
 simple, fr, bien expliquer
 
+haskell:
+------
+compliquer
+
+scala
+-----
+simple, bien documenté, pas de dockerfile officiel
 
 core
 ====
@@ -35,6 +42,19 @@ python
 bcp de runtime error on sait pas pk
 tres rapide a ecrire ! et prise en main facile
 comme le js, il faut des mock ou faire de l'injection de dependance
+
+rust
+----
+les types ne sont pas strait forward (&str,str, String,....)
+Future et Tokio complié
+
+haskell
+-------
+compliqué
+
+scala
+------
+call http facile a réaliser
 
 mise en place du cli en local (lancé emoji en cli)
 ==================================================
