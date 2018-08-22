@@ -1,4 +1,4 @@
-val corePackage = "core.Main"
+val corePackage = "core.Index"
 
 lazy val root = (project in file("."))
   .settings(
