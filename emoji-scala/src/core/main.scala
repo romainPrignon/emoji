@@ -1,12 +1,19 @@
 package core
 
 import scalaj.http.{HttpResponse, HttpOptions, Http}
-import argonaut.{Parse, Json}
-
-case class Result(score: Float, text: String)
-case class Results(results: Array[Result])
+//import argonaut.{Parse, Json, CodecJson}
+import argonaut._, Argonaut._
 
 object Main {
+  case class Result(score: Float, text: String)
+  case class Results(results: List[Result])
+
+  implicit def ResultsCodecJson: CodecJson[Results] =
+    casecodec1(Results.apply, Results.unapply)("results")
+
+  implicit def ResultCodecJson: CodecJson[Result] =
+    casecodec2(Result.apply, Result.unapply)("score", "text")
+
   def doQuery(word: String): HttpResponse[String] = {
     val url = "http://emoji.getdango.com/api/emoji"
     val response = Http(url)
@@ -16,23 +23,29 @@ object Main {
     return response.asString
   }
 
-  def filterBestEmoji(response: HttpResponse[String]): String = {
-    val result: Either[String, Json] = Parse.parse(response.body) // Results type
+  def filterBestEmoji(response: HttpResponse[String]): Either[Exception, String] = {
+    val result = Parse.decodeEither[Results](response.body)
       
     return result match {
-      case Left(err) => println("there was an error: " + err)
+      case Left(err) => {
+        println(err)
+        return Left(new Exception("JsonParseError"))
+      }
       case Right(res) => {
-        println(result)
-        return res.results
+        val maxByScore: (Result) => Float = (result) => result.score
+        
+        val maxRes = res.results.maxBy(maxByScore)
+
+        return Right(maxRes.text)
       }
     }
   }
   
-  def emoji(word: String): Either[Exception, String] = {
-    if (!word) {
-      return new Exception("UndefinedWordError")
+  def emoji(word: String): Either[Exception, Either[Exception, String]] = {
+    if (word.isEmpty()) {
+      return Left(new Exception("UndefinedWordError"))
     }
 
-    return filterBestEmoji(doQuery(word))
+    return Right(filterBestEmoji(doQuery(word)))
   }
 }
