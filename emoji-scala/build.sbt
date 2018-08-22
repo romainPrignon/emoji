@@ -8,6 +8,7 @@ lazy val root = (project in file("."))
     scalaSource in Test := baseDirectory.value / "test",
     mainClass in (Compile, run) := Some(corePackage),
     libraryDependencies ++= Seq(
-        "org.scalaj" %% "scalaj-http" % "2.4.1"
+        "org.scalaj" %% "scalaj-http" % "2.4.1",
+        "io.argonaut" %% "argonaut" % "6.2.1"
     )
   )
