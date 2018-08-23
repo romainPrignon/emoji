@@ -1,8 +1,7 @@
 package core
 
 import scalaj.http.{HttpResponse, HttpOptions, Http}
-//import argonaut.{Parse, Json, CodecJson}
-import argonaut._, Argonaut._
+import argonaut._, Argonaut._ // like import argonaut.{Parse, Json, CodecJson}
 
 object Main {
   case class Result(score: Float, text: String)

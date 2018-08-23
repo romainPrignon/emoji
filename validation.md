@@ -55,6 +55,9 @@ compliqué
 scala
 ------
 call http facile a réaliser
+parse json compliquer
+facile a coder
+test facile a mettre en place
 
 mise en place du cli en local (lancé emoji en cli)
 ==================================================
