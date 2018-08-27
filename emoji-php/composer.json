@@ -1,0 +1,22 @@
+{
+    "name": "romainprignon/emoji-php",
+    "description": "display emoji in php",
+    "version": "0.0.1",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Emoji\\": "src/"
+        }
+    },
+    "scripts": {
+        "start": "php src/main.php"
+    },
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "@stable",
+        "guzzlehttp/guzzle": "@stable"
+    }
+}
