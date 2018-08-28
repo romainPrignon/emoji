@@ -25,6 +25,12 @@ scala
 -----
 simple, bien documenté, pas de dockerfile officiel
 
+php
+-----
+simple, 
+bien documenté, 
+souci avec autoload et composer mais bein documenté
+
 core
 ====
 
@@ -58,6 +64,14 @@ call http facile a réaliser
 parse json compliquer
 facile a coder
 test facile a mettre en place
+
+php
+---
++ simple
++ readable
++ facile a implementer
+- le typage ne sert a rien car pas de compilation
+- il n'y a pas de type Option ou Either => on retourne ?string
 
 mise en place du cli en local (lancé emoji en cli)
 ==================================================

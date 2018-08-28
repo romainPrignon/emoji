@@ -10,7 +10,8 @@
         }
     },
     "scripts": {
-        "start": "php src/main.php"
+        "start": "php src/main.php",
+        "test": "phpunit --bootstrap vendor/autoload.php test"
     },
     "require": {
         "php": ">=7.1"
