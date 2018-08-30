@@ -1,5 +1,8 @@
 import Core from './Core'
+import axios from 'axios'
 
-const core = new Core()
+const argv = process.argv.slice(2)
+const core = new Core(axios)
 
-console.log(core.run(process.argv.slice(2)))
+core.run(argv[0])
+    .then(console.log)
