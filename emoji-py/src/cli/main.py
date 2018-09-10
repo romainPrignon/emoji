@@ -1,10 +1,6 @@
-# WTF ! Can't import .. as module without that ?
-import sys
-sys.path.append('../')
-
-
 import argparse
-from core.main import Emoji
+import requests
+from core.main import Core
 
 
 def stdin():
@@ -16,10 +12,10 @@ def stdin():
     return args.word
 
 def main(word):
-    e = Emoji()
+    core = Core(requests)
 
     try:
-        res = e.emoji(word)
+        res = core.run(word)
 
         return res
     except ValueError as e:
@@ -33,7 +29,3 @@ def stdout(output):
 
 def cli():
     stdout(main(stdin()))
-
-
-if __name__ == '__main__':
-    cli()
