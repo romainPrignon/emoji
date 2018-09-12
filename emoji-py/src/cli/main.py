@@ -1,11 +1,12 @@
 import argparse
 import requests
+import sys
 from core.main import Core
 
 
 def stdin():
-    parser = argparse.ArgumentParser(description='Find an emoji given a word')
-    parser.add_argument('word', metavar='word', type=str, help='a word to find an emoji for')
+    parser = argparse.ArgumentParser(description="Find an emoji given a word")
+    parser.add_argument("word", metavar="word", type=str, help="a word to find an emoji for")
 
     args = parser.parse_args()
 
@@ -18,9 +19,9 @@ def main(word):
         res = core.run(word)
 
         return res
-    except ValueError as e:
-        if str(e) == 'undefined_word_foo_error': print('There is no emoji for foo') # specific catch
-        else: print('There is no emoji for that word') # generic catch
+    except Exception as e:
+        if str(e) == "undefined_word_error": print("There is no emoji for foo")
+        else: print("[Something broke !]", e)
 
         sys.exit(1)
 
