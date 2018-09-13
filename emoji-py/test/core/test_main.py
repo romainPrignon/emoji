@@ -61,7 +61,7 @@ class TestCoreWithNetworkFailure(unittest.TestCase):
 
             self.fail('should fail')
         except ConnectionError as e:
-            self.assertEquals(str(e), 'boom')
+            self.assertEqual(str(e), 'boom')
 
 
 if __name__ == '__main__':
