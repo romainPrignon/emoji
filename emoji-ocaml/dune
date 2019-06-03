@@ -1,0 +1,3 @@
+(executable
+  (name emoji-ocaml)
+  (libraries lwt))

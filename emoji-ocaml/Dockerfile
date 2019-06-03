@@ -2,8 +2,12 @@ FROM ocaml/opam:ubuntu
 
 WORKDIR /opt
 
+# prebuild
+RUN opam build
+RUN opam install dune
+
 COPY . .
 
-RUN opam build
+RUN dune build emoji-ocaml.exe
 
-CMD ["opam", "run"]
+CMD ["_build/default/emoji-ocaml.exe"]
