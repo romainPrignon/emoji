@@ -9,3 +9,6 @@
 - cli folder => output emoji on stdout ✔
 - http folder => emoji as json
 - an entrypoint to switch from cli to http
+
+## TODO
+- common-lisp
