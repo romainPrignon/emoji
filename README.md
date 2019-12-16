@@ -11,8 +11,8 @@
 - an entrypoint to switch from cli to http
 
 ## TODO
-- rust
 - cpp
+- rust
 - c
 - common-lisp
 - haskell

@@ -31,6 +31,11 @@ simple,
 bien documenté, 
 souci avec autoload et composer mais bein documenté
 
+cpp
+---
+simple
+g++ deja présent
+
 core
 ====
 
@@ -72,6 +77,11 @@ php
 + facile a implementer
 - le typage ne sert a rien car pas de compilation
 - il n'y a pas de type Option ou Either => on retourne ?string
+
+cpp
+---
+difficile d'utiliser des lib externe, pas de pkg manager
+difficile de prototyper, debug
 
 mise en place du cli en local (lancé emoji en cli)
 ==================================================
