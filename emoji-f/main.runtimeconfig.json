@@ -1,0 +1,9 @@
+{
+    "runtimeOptions": {
+        "tfm": "net45",
+        "framework": {
+            "name": "Microsoft.NETCore.App",
+            "version": "3.1.0"
+        }
+    }
+}
