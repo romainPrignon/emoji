@@ -36,6 +36,18 @@ cpp
 simple
 g++ deja présent
 
+csharp
+------
+assez simple
+
+fsharp
+------
+plutot complexe
+
+v
+---
+simple
+
 core
 ====
 
@@ -83,6 +95,24 @@ cpp
 difficile d'utiliser des lib externe, pas de pkg manager
 difficile de prototyper, debug
 
+csharp
+------
++ simple
++ readable
++ facile a implem
+
+fsharp
+------
+simple a ecrire et comprendre
+system de module et namespace pas clair
+ne compile pas pour le moment
+
+v
+---
++ simple
++ readable
+- manque certain outils de lang
+
 mise en place du cli en local (lancé emoji en cli)
 ==================================================
 
@@ -106,3 +136,15 @@ difficil de parcé les couleur de la console
 go
 ---
 assez simple a mettre en place, ya des function toutes faites
+
+csharp
+------
+simple
+
+fsharp
+------
+dur
+
+v
+---
+simple

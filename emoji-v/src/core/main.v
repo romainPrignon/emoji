@@ -22,6 +22,7 @@ fn parse_json(response ?http.Response) []Result {
 }
 
 // There should be something preventing from using [0].text
+// group emotion prevent us from using planet but it workss
 fn filter_best_emoji(results []Result) string {
     return results.filter(it.group == 'emotion')[0].text
 }
