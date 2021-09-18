@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="src/core.fsx" />
     <Compile Include="src/main.fs" />
   </ItemGroup>
 

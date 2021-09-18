@@ -1,4 +1,5 @@
 open System
+open Emoji.Core
 
 let run (word: string): string option = 
     try
