@@ -48,6 +48,10 @@ v
 ---
 simple
 
+koka
+====
+- pas encore au point
+
 core
 ====
 
@@ -112,6 +116,11 @@ v
 + simple
 + readable
 - manque certain outils de lang
+
+koka
+----
+- pas facile de suivre ce qu'on importe et ce que l'on utilise (savoir d'ou ca viens)
+- la stdlib n'est pas du tout complete
 
 mise en place du cli en local (lancé emoji en cli)
 ==================================================
