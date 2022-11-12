@@ -8,3 +8,4 @@ COPY . .
 # RUN v install ....
 
 ENTRYPOINT ["v", "run", "/opt/src/main.v"]
+# ENTRYPOINT ["v"]

@@ -6,3 +6,4 @@ build:
 
 start:
 	docker run -it --rm --name emoji-v emoji-v love
+	docker run -it --rm --name emoji-v emoji-v 

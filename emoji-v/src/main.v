@@ -1,11 +1,22 @@
 import os
 import core
 
-fn main() {
-	args := os.args[1..]
-	word := args[0] 
+fn stdin(argv []string) !string {
+	args := argv[1..]
+	word := args[0]!
 
-	res := core.run(word)
+	return word
+}
 
+fn stdout(res string) {
 	println(res)
+}
+
+fn main() {
+	word := stdin(os.args) or {panic("Give some word as input")} // could also just print
+
+	// res := core.run(word)! // will panic
+	res := core.run(word) or {"Something Broke !"}
+
+	stdout(res)
 }
