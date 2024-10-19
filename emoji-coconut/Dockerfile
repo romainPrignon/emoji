@@ -1,4 +1,4 @@
-FROM python:3.11.1
+FROM python:3.12
 
 WORKDIR /opt
 
@@ -7,5 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY src/ src/
 RUN coconut --strict src/ dist/
+# RUN coconut --strict src/ dist/ --mypy
 
-ENTRYPOINT ["python", "/opt/dist/main.py"]
+# ENTRYPOINT ["python", "/opt/dist/main.py"]

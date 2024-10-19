@@ -1,0 +1,15 @@
+from fastapi import FastAPI
+import requests
+from ..core.main import Core
+
+app = FastAPI()
+core = Core$(requests)
+
+@app.get("/emoji/{word}")
+def emoji(word: str):
+    res = core(word)
+
+    return {
+        "word": word,
+        "emoji": res
+    } if res else None

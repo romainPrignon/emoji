@@ -1,0 +1,27 @@
+from typing import Any, Dict, Optional
+from requests import Request, Response
+from ..utils.main import head
+
+Result = Dict[Any, Any]
+# [{'slug': 'e0-6-love-letter', 'character': '💌', 'unicodeName': 'E0.6 love letter', 'codePoint': '1F48C', 'group': 'smileys-emotion', 'subGroup': 'heart'}
+
+access_key = "c19560f67ed78510d1fa453f5609665c9538934d"
+
+
+def do_query(http_client: Request, word: str) -> Optional[Response]:
+    try:
+        res = http_client.get("https://emoji-api.com/emojis", params={"search": word, "access_key": access_key})
+        return res
+    except Exception as err:
+        return None
+
+
+def parse_json(res: Optional[Response]) -> Optional[Result]:
+    return res |> .json() if res else None
+
+
+def filter_best_emoji(res: Optional[Result]) -> Optional[str]:
+    best_emoji = head(res)
+    return best_emoji["character"] if best_emoji else None
+
+Core = do_query ..> parse_json ..> filter_best_emoji

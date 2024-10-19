@@ -1,0 +1,4 @@
+from typing import Optional, Sequence
+
+def head(seq: Sequence[T]) -> Optional[T]:
+    return seq[0] if seq else None

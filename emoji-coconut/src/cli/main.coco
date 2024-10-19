@@ -1,10 +1,10 @@
 import argparse
-# import requests
-# import sys
-# from core.main import Core
+import requests
+from core.main import Core
 
+core = Core$(requests)
 
-def stdin():
+def stdin() -> str:
     parser = argparse.ArgumentParser(description="Find an emoji given a word")
     parser.add_argument("word", metavar="word", type=str, help="a word to find an emoji for")
 
@@ -12,26 +12,14 @@ def stdin():
 
     return args.word
 
-def main(word):
-    return word
 
-# def main(word):
-    # print("hello")
-    # core = Core(requests)
+def main(word: int) -> str:
+    res = core(word)
+    return res if res else "something broke !"
 
-    # try:
-    #     res = core.run(word)
 
-    #     return res
-    # except Exception as e:
-    #     if str(e) == "undefined_word_error": print("There is no emoji for foo")
-    #     else: print("[Something broke !]", e)
-
-    #     sys.exit(1)
-
-def stdout(output: str):
+def stdout(output: str) -> None:
     output |> print
 
-def cli():
-    # stdout(main(stdin()))
-    return stdin |> main |> stdout
+
+cli = stdin ..> main ..> stdout
