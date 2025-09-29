@@ -1,0 +1,19 @@
+{
+    "name": "emoji-rust",
+    "workspaceFolder": "/opt",
+    "build": {
+        "context": "..",
+        "dockerfile": "../Dockerfile"
+    },
+    "runArgs": [
+        "--name",
+        "emoji-rust"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+[package]
+name = "emoji-rust"
+version = "0.0.1"
+authors = ["Romain Prignon <pro.rprignon@gmail.com>"]
+edition = "2021"
+
+[[bin]]
+name = "emoji"
+path = "src/main.rs"
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+tokio = { version = "1", features = ["full"] }

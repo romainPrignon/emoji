@@ -1,16 +1,10 @@
-FROM rust:1.27
+FROM rust:1.90-bullseye
 
 WORKDIR /opt
 
 COPY . .
 
-RUN cd core && cargo install
+RUN cargo build
 
-# cache hack
-RUN echo $RANDOM
-
-# here because of cd core
-RUN cd core && cargo run
-
-# comment because cd core
-#CMD ["cargo", "run"]
+# TODO: replace with bin
+ENTRYPOINT ["/opt/target/debug/emoji"]
